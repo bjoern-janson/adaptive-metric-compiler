@@ -46,9 +46,11 @@ $$\chi(\Delta)=\rho=\sigma(M_C-\theta)$$
 
 where:
 
-* (\sigma(\cdot)) is the logistic function,
-* (\theta) is a computational threshold,
-* (\rho) is the resulting salience score.
+where:
+
+- $\sigma(\cdot)$ is the logistic function,
+- $\theta$ is a computational threshold,
+- $\rho$ is the resulting salience score.
 
 The sigmoid produces a continuous estimate between zero and one.
 
