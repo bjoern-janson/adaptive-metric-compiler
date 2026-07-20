@@ -350,11 +350,7 @@ It has entered a new computational regime.
 AMP defines intelligence as:
 
 $$
-\boxed{
-\text{Intelligence}
-=
-\text{recursive execution of }D_\Omega
-}
+\boxed{\text{Intelligence}=\text{recursive execution of }D_\Omega}
 $$
 
 The framework views intelligence as continual metric compilation.
