@@ -42,13 +42,7 @@ denote the causal mass assigned to an environmental difference.
 
 AMP transforms causal mass into salience using a sigmoid activation:
 
-$$
-\chi_{\Delta}
-=
-\rho
-=
-\sigma(M_C-\theta)
-$$
+$$\chi(\Delta)=\rho=\sigma(M_C-\theta)$$
 
 where:
 
@@ -71,11 +65,10 @@ Salience alone does not allocate computation.
 Instead, it drives a computational gate:
 
 $$
-B_{\rho}
-=
+B(\rho)=
 \begin{cases}
-1 & \rho \geq \rho_{\mathrm{crit}} \\
-0 & \rho < \rho_{\mathrm{crit}}
+1 & \text{if } \rho \geq \rho_{\mathrm{crit}}\\
+0 & \text{if } \rho < \rho_{\mathrm{crit}}
 \end{cases}
 $$
 
