@@ -16,7 +16,7 @@ A useful metric should not merely describe the environment accurately.
 
 It should also make future computation easier.
 
-Examples include metrics that
+Examples include metrics that:
 
 - reduce search,
 - preserve important structure,
@@ -31,20 +31,16 @@ AMP therefore evaluates metrics according to their computational utility rather 
 
 # Metric Mapping
 
-AMP defines an internal metric as
+AMP defines an internal metric as:
 
-\[
-M_Q
-:
-E
-\longrightarrow
-A
-\]
+$$
+M_Q:E\longrightarrow A
+$$
 
-where
+where:
 
-- \(E\) denotes the environment,
-- \(A\) denotes the agent's internal computational space.
+- $E$ denotes the environment,
+- $A$ denotes the agent's internal computational space.
 
 The mapping determines how environmental structure is represented internally.
 
@@ -54,82 +50,48 @@ Different mappings expose different computational possibilities.
 
 # Mapping Quality
 
-The overall quality of a metric is defined as
+The overall quality of a metric is defined as:
 
-\[
-Q_M
-=
+$$
+Q_M=
 \frac{
-C
-\,
-T
-\,
-G_L
-\,
-K
-\,
-R_a
-\,
-I_c
+C \times T \times G_L \times K \times R_a \times I_c
 }
 {D}
-\]
+$$
 
-where
+where:
 
-\[
-\begin{aligned}
-C
-&=
-\frac{\Delta H(\mathrm{Search})}
-{I_{\mathrm{stored}}}
-\\[1em]
-K
-&=
--
-\frac{
-d\,
-D_{\mathrm{KL}}
-(P_{\mathrm{true}}
-\parallel
-P_{\mathrm{model}})
-}
-{dt}
-\\[1em]
-G_L
-&=
-\frac{
-\partial
-\Omega_{\mathrm{viable}}
-}
-{
-\partial
-I_{\mathrm{stored}}
-}
-\\[1em]
-R_a
-&=
-\frac{
-\min(\mathrm{Scale},\mathrm{Horizon})
-}{
-\max(\mathrm{Scale},\mathrm{Horizon})
-}
-\,
-\log_2(1+\mathcal L)
-\\[1em]
-I_c
-&=
-\frac{
-\mathrm{Preserved\ Invariants}
-}{
-\mathrm{Relevant\ Structure}
-}
-\\[1em]
-D
-&=
-K(M_Q)
-\end{aligned}
-\]
+$$
+C=\frac{\Delta H(\text{Search})}{I_{\text{stored}}}
+$$
+
+$$
+K=-\frac{dD_{KL}(P_{\text{true}}\parallel P_{\text{model}})}{dt}
+$$
+
+$$
+G_L=
+\frac{\partial\Omega_{\text{viable}}}
+{\partial I_{\text{stored}}}
+$$
+
+$$
+R_a=
+\frac{\min(\text{Scale},\text{Horizon})}
+{\max(\text{Scale},\text{Horizon})}
+\log_2(1+\mathcal{L})
+$$
+
+$$
+I_c=
+\frac{\text{Preserved Invariants}}
+{\text{Relevant Structure}}
+$$
+
+$$
+D=K(M_Q)
+$$
 
 Higher values correspond to metrics that better support future computation.
 
@@ -139,12 +101,11 @@ Higher values correspond to metrics that better support future computation.
 
 ## Search Compression
 
-\[
-C
-=
-\frac{\Delta H(\mathrm{Search})}
-{I_{\mathrm{stored}}}
-\]
+$$
+C=
+\frac{\Delta H(\text{Search})}
+{I_{\text{stored}}}
+$$
 
 A useful metric reduces the entropy of future search.
 
@@ -154,15 +115,15 @@ Representations that dramatically narrow the search space receive higher values.
 
 ## Task Performance
 
-\[
+$$
 T
-\]
+$$
 
 Task performance measures how effectively the metric supports successful execution on the target domain.
 
 The precise definition depends on the application.
 
-Examples include
+Examples include:
 
 - prediction accuracy,
 - planning success,
@@ -173,19 +134,10 @@ Examples include
 
 ## Predictive Improvement
 
-\[
-K
-=
--
-\frac{
-d
-D_{\mathrm{KL}}
-(P_{\mathrm{true}}
-\parallel
-P_{\mathrm{model}})
-}
-{dt}
-\]
+$$
+K=
+-\frac{dD_{KL}(P_{\text{true}}\parallel P_{\text{model}})}{dt}
+$$
 
 A useful metric should continuously reduce divergence between the model and reality.
 
@@ -195,18 +147,11 @@ Higher values indicate faster convergence toward accurate internal models.
 
 ## Growth of Viable Computation
 
-\[
-G_L
-=
-\frac{
-\partial
-\Omega_{\mathrm{viable}}
-}
-{
-\partial
-I_{\mathrm{stored}}
-}
-\]
+$$
+G_L=
+\frac{\partial\Omega_{\text{viable}}}
+{\partial I_{\text{stored}}}
+$$
 
 This measures how much additional computational capability is created by storing new information.
 
@@ -216,17 +161,12 @@ Metrics that unlock disproportionately larger computational spaces receive large
 
 ## Representational Adaptability
 
-\[
-R_a
-=
-\frac{
-\min(\mathrm{Scale},\mathrm{Horizon})
-}{
-\max(\mathrm{Scale},\mathrm{Horizon})
-}
-\,
-\log_2(1+\mathcal L)
-\]
+$$
+R_a=
+\frac{\min(\text{Scale},\text{Horizon})}
+{\max(\text{Scale},\text{Horizon})}
+\log_2(1+\mathcal{L})
+$$
 
 Adaptability measures how effectively the metric generalizes across scales and planning horizons.
 
@@ -238,15 +178,11 @@ Adaptive metrics remain useful across multiple contexts.
 
 ## Invariant Preservation
 
-\[
-I_c
-=
-\frac{
-\mathrm{Preserved\ Invariants}
-}{
-\mathrm{Relevant\ Structure}
-}
-\]
+$$
+I_c=
+\frac{\text{Preserved Invariants}}
+{\text{Relevant Structure}}
+$$
 
 A high-quality metric preserves important structural relationships while discarding irrelevant variation.
 
@@ -256,11 +192,9 @@ This encourages abstraction without destroying useful information.
 
 ## Complexity Penalty
 
-\[
-D
-=
-K(M_Q)
-\]
+$$
+D=K(M_Q)
+$$
 
 More expressive metrics generally require greater computational complexity.
 
@@ -272,7 +206,7 @@ The objective is therefore not maximal complexity but maximal computational effi
 
 # Interpretation
 
-A useful metric is one that simultaneously
+A useful metric is one that simultaneously:
 
 - compresses search,
 - improves prediction,
@@ -293,13 +227,11 @@ Mapping Quality evaluates existing metrics.
 
 It does **not** create new ones.
 
-The discovery operator acts on the evaluated metric
+The discovery operator acts on the evaluated metric:
 
-\[
-M_Q
-\xrightarrow{D_\Omega}
-M_Q'
-\]
+$$
+M_Q\xrightarrow{D_\Omega}M_Q'
+$$
 
 producing an improved mapping.
 
@@ -315,11 +247,11 @@ Traditional optimization searches for better parameters within a fixed metric.
 
 AMP separates this process from metric discovery.
 
-Optimization follows
+Optimization follows:
 
-\[
+$$
 \nabla Q_M(M_Q)
-\]
+$$
 
 improving performance while remaining inside the same representational space.
 
@@ -333,7 +265,7 @@ This distinction allows AMP to model conceptual innovation rather than parameter
 
 Within the Adaptive Metric Compiler, Mapping Quality acts as the evaluation function for recursive metric evolution.
 
-The computational pipeline becomes
+The computational pipeline becomes:
 
 ```text
 Environmental Difference
