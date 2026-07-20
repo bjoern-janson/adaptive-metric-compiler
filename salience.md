@@ -18,11 +18,11 @@ At any moment, the environment contains vastly more information than can be proc
 
 Consequently, computation must be selective.
 
-The problem is therefore not
+The problem is therefore not:
 
 > "What information exists?"
 
-but
+but:
 
 > "Which information deserves computation?"
 
@@ -34,23 +34,23 @@ Salience provides this selection mechanism.
 
 Let
 
-\[
-\mathcal M_C
-\]
+$$
+\mathcal{M}_C
+$$
 
 denote the causal mass assigned to an environmental difference.
 
-AMP transforms causal mass into salience using a sigmoid activation
+AMP transforms causal mass into salience using a sigmoid activation:
 
-\[
+$$
 \chi(\Delta)
 =
 \rho
 =
-\sigma(\mathcal M_C-\theta)
-\]
+\sigma(\mathcal{M}_C-\theta)
+$$
 
-where
+where:
 
 - \(\sigma(\cdot)\) is the logistic function,
 - \(\theta\) is a computational threshold,
@@ -68,29 +68,26 @@ Large causal differences rapidly approach maximal salience.
 
 Salience alone does not allocate computation.
 
-Instead, it drives a computational gate
+Instead, it drives a computational gate:
 
-\[
-\mathcal B(\rho)
+$$
+\mathcal{B}(\rho)
 =
 \begin{cases}
-1,&
-\rho\ge\rho_{\mathrm{crit}}
-\\
-0,&
-\rho<\rho_{\mathrm{crit}}
+1, & \rho \geq \rho_{\mathrm{crit}} \\
+0, & \rho < \rho_{\mathrm{crit}}
 \end{cases}
-\]
+$$
 
-where
+where:
 
 - \(\rho_{\mathrm{crit}}\) is the activation threshold.
 
-If the gate evaluates to
+If the gate evaluates to:
 
-\[
-\mathcal B=1,
-\]
+$$
+\mathcal{B}=1
+$$
 
 the observation proceeds through the compiler.
 
@@ -147,12 +144,12 @@ Salience is inherently contextual.
 
 The same observation may possess high salience under one objective and negligible salience under another.
 
-For example,
+For example:
 
 - a medical image may be highly salient to a radiologist,
 - nearly irrelevant to a financial trading system.
 
-AMP therefore models salience as a property of the interaction between
+AMP therefore models salience as a property of the interaction between:
 
 - the observation,
 - the agent,
@@ -167,7 +164,7 @@ Causal Mass estimates intrinsic computational importance.
 
 Salience estimates whether that importance justifies computation under current resource constraints.
 
-Conceptually,
+Conceptually:
 
 ```text
 Difference
@@ -182,11 +179,11 @@ Salience
 Resource Allocation
 ```
 
-Causal Mass answers
+Causal Mass answers:
 
 > "How important is this?"
 
-Salience answers
+Salience answers:
 
 > "Is it important enough to process?"
 
@@ -196,7 +193,7 @@ Salience answers
 
 Only gated observations are used to construct internal metrics.
 
-The pipeline therefore becomes
+The pipeline therefore becomes:
 
 ```text
 Environmental Difference
