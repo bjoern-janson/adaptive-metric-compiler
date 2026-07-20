@@ -44,17 +44,18 @@ AMP transforms causal mass into salience using a sigmoid activation:
 
 $$
 \chi(\Delta)
-=
-\rho
-=
+============
+
+# \rho
+
 \sigma(\mathcal{M}_C-\theta)
 $$
 
 where:
 
-- \(\sigma(\cdot)\) is the logistic function,
-- \(\theta\) is a computational threshold,
-- \(\rho\) is the resulting salience score.
+* (\sigma(\cdot)) is the logistic function,
+* (\theta) is a computational threshold,
+* (\rho) is the resulting salience score.
 
 The sigmoid produces a continuous estimate between zero and one.
 
@@ -71,22 +72,23 @@ Salience alone does not allocate computation.
 Instead, it drives a computational gate:
 
 $$
-\mathcal{B}(\rho)
-=
+\mathcal{B}_{\rho}
+==================
+
 \begin{cases}
-1, & \rho \geq \rho_{\mathrm{crit}} \\
-0, & \rho < \rho_{\mathrm{crit}}
+1 & \rho \geq \rho_{\mathrm{crit}} \
+0 & \rho < \rho_{\mathrm{crit}}
 \end{cases}
 $$
 
 where:
 
-- \(\rho_{\mathrm{crit}}\) is the activation threshold.
+* (\rho_{\mathrm{crit}}) is the activation threshold.
 
 If the gate evaluates to:
 
 $$
-\mathcal{B}=1
+\mathcal{B}_{\rho}=1
 $$
 
 the observation proceeds through the compiler.
@@ -113,10 +115,10 @@ Any monotonic activation function capable of transforming causal significance in
 
 The logistic function is adopted because it has several useful properties:
 
-- continuous,
-- differentiable,
-- bounded,
-- naturally interpretable as activation probability.
+* continuous,
+* differentiable,
+* bounded,
+* naturally interpretable as activation probability.
 
 It also allows small differences near the threshold to produce large changes in computational allocation.
 
@@ -146,15 +148,15 @@ The same observation may possess high salience under one objective and negligibl
 
 For example:
 
-- a medical image may be highly salient to a radiologist,
-- nearly irrelevant to a financial trading system.
+* a medical image may be highly salient to a radiologist,
+* nearly irrelevant to a financial trading system.
 
 AMP therefore models salience as a property of the interaction between:
 
-- the observation,
-- the agent,
-- the current task,
-- the available computational resources.
+* the observation,
+* the agent,
+* the current task,
+* the available computational resources.
 
 ---
 
