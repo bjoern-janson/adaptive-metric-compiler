@@ -14,11 +14,11 @@ Causal Mass therefore measures information according to both its informational c
 
 Traditional information theory measures surprise.
 
-For an observation \(x\),
+For an observation $x$:
 
-\[
-I(x)=-\log_2 P(x)
-\]
+$$
+I(x)=-\log_2P(x)
+$$
 
 Rare events contain more information than common ones.
 
@@ -34,30 +34,29 @@ AMP therefore introduces **Causal Mass**, which combines informational rarity wi
 
 # Causal Influence
 
-The causal influence of an agent is defined as
+The causal influence of an agent is defined as:
 
-\[
-\Phi
-=
-D_{\mathrm{KL}}
+$$
+\Phi=
+D_{KL}
 \left(
-P(X|\mathrm{agent})
+P(X|\text{agent})
 \parallel
-P(X|\neg\mathrm{agent})
+P(X|\neg\text{agent})
 \right)
-\]
+$$
 
-where
+where:
 
-- \(D_{\mathrm{KL}}\) is the Kullback–Leibler divergence,
-- \(P(X|\mathrm{agent})\) is the probability distribution over outcomes with the agent,
-- \(P(X|\neg\mathrm{agent})\) is the corresponding counterfactual distribution.
+- $D_{KL}$ is the Kullback–Leibler divergence,
+- $P(X|\text{agent})$ is the probability distribution over outcomes with the agent,
+- $P(X|\neg\text{agent})$ is the corresponding counterfactual distribution.
 
-The quantity
+The quantity:
 
-\[
+$$
 \Phi
-\]
+$$
 
 measures how much the existence of the agent changes the future distribution of states.
 
@@ -67,19 +66,19 @@ Large values correspond to agents that significantly alter future outcomes.
 
 # Environmental Differences
 
-Let
+Let:
 
-\[
+$$
 \Delta(x_1,x_2)
-\]
+$$
 
 represent the difference between two environmental states.
 
-A detectable distinction exists whenever
+A detectable distinction exists whenever:
 
-\[
-\Delta(x_1,x_2)\neq0.
-\]
+$$
+\Delta(x_1,x_2)\neq0
+$$
 
 These differences constitute the raw input to the Adaptive Metric Compiler.
 
@@ -91,43 +90,41 @@ Only a small subset meaningfully changes future behavior.
 
 # Definition of Causal Mass
 
-AMP defines the causal mass of an environmental difference as
+AMP defines the causal mass of an environmental difference as:
 
-\[
-\mathcal M_C
-=
+$$
+M_C=
 \int_{\Omega}
 \left|
 \frac{\partial A}{\partial\Delta}
 \right|
-\,
-(-\log_2 p(\Delta))
-\,d\Omega
-\]
+(-\log_2p(\Delta))
+d\Omega
+$$
 
-where
+where:
 
-- \(A\) denotes future action,
-- \(p(\Delta)\) is the probability of observing the difference,
-- \(\Omega\) is the observation space.
+- $A$ denotes future action,
+- $p(\Delta)$ is the probability of observing the difference,
+- $\Omega$ is the observation space.
 
 This expression combines two independent quantities.
 
-The first,
+The first:
 
-\[
+$$
 \left|
 \frac{\partial A}{\partial\Delta}
-\right|,
-\]
+\right|
+$$
 
 measures how strongly future action changes in response to the difference.
 
-The second,
+The second:
 
-\[
--\log_2 p(\Delta),
-\]
+$$
+-\log_2p(\Delta)
+$$
 
 measures informational surprise.
 
@@ -137,13 +134,13 @@ Their product defines the total computational importance assigned to the observa
 
 # Interpretation
 
-High causal mass occurs when a difference is
+High causal mass occurs when a difference is:
 
 - behaviorally important,
 - informative,
 - predictive of future consequences.
 
-Low causal mass occurs when a difference is
+Low causal mass occurs when a difference is:
 
 - redundant,
 - irrelevant,
@@ -157,11 +154,9 @@ The framework therefore distinguishes between **information** and **computationa
 
 Shannon information measures uncertainty reduction.
 
-\[
-I(x)
-=
--\log_2P(x)
-\]
+$$
+I(x)=-\log_2P(x)
+$$
 
 Causal Mass instead measures computational importance.
 
@@ -179,7 +174,7 @@ Causal Mass is not itself attention.
 
 Instead, it provides the input to the salience computation.
 
-The computational pipeline is
+The computational pipeline is:
 
 ```text
 Environmental Difference
@@ -191,7 +186,7 @@ Environmental Difference
       Salience χ
           │
           ▼
- Computational Gate 𝓑
+ Computational Gate B
           │
           ▼
  Metric Construction
@@ -227,7 +222,7 @@ Causal significance is therefore relational rather than absolute.
 
 ## Scale Independence
 
-The framework is intended to apply across multiple scales, including
+The framework is intended to apply across multiple scales, including:
 
 - sensory processing,
 - concept formation,
@@ -244,7 +239,7 @@ Causal Mass is the first computational filter in the Adaptive Metric Compiler.
 
 It determines which environmental differences are worth allocating computational resources toward.
 
-Subsequent stages of the framework transform these weighted differences into
+Subsequent stages of the framework transform these weighted differences into:
 
 - salience,
 - computational allocation,
