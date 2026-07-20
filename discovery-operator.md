@@ -14,15 +14,15 @@ AMP instead models intelligence as the continual discovery of better representat
 
 # Motivation
 
-Given an internal metric
+Given an internal metric:
 
-\[
+$$
 M_Q
-\]
+$$
 
 an optimization algorithm searches for better solutions while remaining inside that metric.
 
-For example,
+For example:
 
 - gradient descent adjusts parameters,
 - A* searches a graph,
@@ -41,20 +41,16 @@ Its output is a **better way of representing problems.**
 
 # Definition
 
-The Discovery Operator is defined as
+The Discovery Operator is defined as:
 
-\[
-D_\Omega
-:
-M_Q
-\longrightarrow
-M_Q'
-\]
+$$
+D_{\Omega}:M_Q\longrightarrow M_Q'
+$$
 
-where
+where:
 
-- \(M_Q\) is the current metric,
-- \(M_Q'\) is the discovered successor metric.
+- $M_Q$ is the current metric,
+- $M_Q'$ is the discovered successor metric.
 
 The operator transforms one computational representation into another.
 
@@ -62,7 +58,7 @@ The operator transforms one computational representation into another.
 
 # Interpretation
 
-A discovery may
+A discovery may:
 
 - reveal hidden invariants,
 - simplify search,
@@ -79,23 +75,21 @@ The result is a different computational landscape.
 
 # Optimization vs Discovery
 
-Optimization follows the local structure of an existing metric.
+Optimization follows the local structure of an existing metric:
 
-\[
+$$
 \nabla Q_M(M_Q)
-\]
+$$
 
 The representation remains unchanged.
 
 Only the solution improves.
 
-Discovery instead changes the metric itself.
+Discovery instead changes the metric itself:
 
-\[
-D_\Omega(M_Q)
-=
-M_Q'
-\]
+$$
+D_{\Omega}(M_Q)=M_Q'
+$$
 
 The optimization landscape is replaced by a new one.
 
@@ -105,23 +99,19 @@ This distinction forms one of the central claims of AMP.
 
 # Discovery Efficiency
 
-The effectiveness of metric discovery is measured by
+The effectiveness of metric discovery is measured by:
 
-\[
-D_M
-=
+$$
+D_M=
 \frac{
-\Delta
-\Omega_{\mathrm{viable}}
-(M_Q\rightarrow M_Q')
+\Delta\Omega_{viable}(M_Q\rightarrow M_Q')
 }
 {
-C_{\mathrm{search}}
-(M_Q\rightarrow M_Q')
+C_{search}(M_Q\rightarrow M_Q')
 }
-\]
+$$
 
-where
+where:
 
 - numerator: increase in viable computational space,
 - denominator: computational cost of discovering the new metric.
@@ -132,26 +122,22 @@ Higher values indicate more computational leverage per unit search effort.
 
 # Computational Leverage
 
-The leverage created by discovery is
+The leverage created by discovery is:
 
-\[
-L_M
-=
+$$
+L_M=
 \frac{
-\Delta
-\Omega_{\mathrm{viable}}
-\,
-\Delta Q
+\Delta\Omega_{viable}\times\Delta Q
 }
 {
 \Delta C_M
 }
-\]
+$$
 
-where
+where:
 
-- \(\Delta Q\) is the improvement in mapping quality,
-- \(\Delta C_M\) is the computational cost of discovery.
+- $\Delta Q$ is the improvement in mapping quality,
+- $\Delta C_M$ is the computational cost of discovery.
 
 This quantity estimates how much computational capability is gained relative to the resources invested in discovering the new metric.
 
@@ -161,7 +147,7 @@ This quantity estimates how much computational capability is gained relative to 
 
 Many of the largest advances in science and engineering arise not from solving problems faster, but from changing how problems are represented.
 
-Examples include
+Examples include:
 
 - positional number systems,
 - Cartesian coordinates,
@@ -183,7 +169,7 @@ Discovery is not a single event.
 
 Each newly discovered metric creates new opportunities for further discovery.
 
-The process becomes
+The process becomes:
 
 ```text
 M₀
@@ -215,7 +201,7 @@ Each iteration expands the computational possibilities available to the next.
 
 Discovery depends on metric evaluation.
 
-The pipeline is
+The pipeline is:
 
 ```text
 Current Metric
@@ -238,19 +224,19 @@ The Discovery Operator determines **how metrics evolve.**
 
 # Search over Metrics
 
-Traditional optimization searches
+Traditional optimization searches:
 
 ```text
 solution
 ```
 
-inside
+inside:
 
 ```text
 fixed representation
 ```
 
-AMP instead searches
+AMP instead searches:
 
 ```text
 representation
@@ -289,16 +275,15 @@ Changing the representation changes every optimization problem that follows.
 
 # Relationship to Intelligence
 
-AMP defines intelligence as
+AMP defines intelligence as:
 
-\[
+$$
 \boxed{
-\mathrm{Intelligence}
+\text{Intelligence}
 =
-\text{recursive execution of }
-D_\Omega
+\text{recursive execution of }D_{\Omega}
 }
-\]
+$$
 
 Rather than equating intelligence with prediction or optimization, the framework proposes that intelligence is fundamentally the ability to construct increasingly effective internal metrics.
 
@@ -312,22 +297,17 @@ Discovery is the process that creates the metric.
 
 Repeated applications of the Discovery Operator may eventually reach a critical point where a small representational improvement produces a disproportionately large increase in computational capability.
 
-Formally,
+Formally:
 
-\[
-M_Q
-\xrightarrow{D_\Omega}
-M_Q'
-\]
+$$
+M_Q\xrightarrow{D_{\Omega}}M_Q'
+$$
 
-may produce
+may produce:
 
-\[
-\Delta
-\Omega_{\mathrm{viable}}
-\gg
-\Delta C_M
-\]
+$$
+\Delta\Omega_{viable}\gg\Delta C_M
+$$
 
 creating a computational phase transition.
 
