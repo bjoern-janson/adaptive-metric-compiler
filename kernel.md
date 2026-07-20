@@ -1,3 +1,51 @@
+# Kernel
+
+The Kernel is the complete computational pipeline of the **Adaptive Metric Compiler (AMP)**.
+
+It describes the transformation from raw environmental differences into recursively improved internal metrics.
+
+The central hypothesis of AMP is that intelligence emerges through the repeated execution of this pipeline:
+
+$$
+\Delta
+\xrightarrow{\chi,\mathcal B,F}
+M_Q
+\xrightarrow{Q_M,D_{\Omega}}
+M_Q'
+$$
+
+where environmental differences are transformed into computationally useful metrics, evaluated, and replaced by improved metrics.
+
+---
+
+# Overview
+
+The Adaptive Metric Compiler consists of seven primary stages:
+
+```text
+Environmental Difference
+          │
+          ▼
+     Causal Mass
+          │
+          ▼
+       Salience
+          │
+          ▼
+ Computational Gate
+          │
+          ▼
+ Metric Construction
+          │
+          ▼
+ Mapping Quality
+          │
+          ▼
+ Discovery Operator
+          │
+          ▼
+ Improved Metric
+
 # Unified Adaptive Metric Compiler (AMP)
 
 ## Causal Mass
