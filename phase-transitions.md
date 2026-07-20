@@ -199,16 +199,7 @@ Phase transitions are characterized by unusually large computational leverage.
 The leverage metric:
 
 $$
-L_M
-=
-\frac{
-\Delta\Omega_{viable}
-\,
-\Delta Q
-}
-{
-\Delta C_M
-}
+L_M=\frac{\Delta\Omega_{viable}\Delta Q}{\Delta C_M}
 $$
 
 becomes exceptionally large because a relatively small discovery unlocks a vastly larger computational space.
