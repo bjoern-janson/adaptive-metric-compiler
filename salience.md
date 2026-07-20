@@ -76,7 +76,7 @@ $$
 
 where:
 
-* (\rho_{\mathrm{crit}}) is the activation threshold.
+* $\rho_{\mathrm{crit}}$ is the activation threshold.
 
 If the gate evaluates to:
 
