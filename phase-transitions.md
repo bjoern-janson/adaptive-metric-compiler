@@ -20,7 +20,7 @@ These changes are continuous.
 
 Occasionally, however, a new representation transforms the problem itself.
 
-Examples include
+Examples include:
 
 - positional notation,
 - Cartesian coordinates,
@@ -39,19 +39,19 @@ AMP models these events as **computational phase transitions**.
 
 Let
 
-\[
+$$
 M_Q
-\]
+$$
 
 denote the current internal metric.
 
 Metric discovery produces
 
-\[
+$$
 M_Q
 \xrightarrow{D_\Omega}
 M_Q'
-\]
+$$
 
 Most discoveries produce gradual improvements.
 
@@ -61,25 +61,25 @@ A phase transition occurs when this transformation produces a discontinuous incr
 
 # Formal Criterion
 
-AMP proposes the transition criterion
+AMP proposes the transition criterion:
 
-\[
+$$
 \frac{\partial^2 G_B}
 {\partial I_c^2}
-\Bigg|_{I_c=I_{\mathrm{crit}}}
+\bigg|_{I_c=I_{crit}}
 \rightarrow
 \infty
-\Longrightarrow
+\implies
 M_Q
 \xrightarrow{D_\Omega}
 M_Q'
-\]
+$$
 
-where
+where:
 
-- \(G_B\) denotes computational growth,
-- \(I_c\) measures invariant preservation,
-- \(I_{\mathrm{crit}}\) is the critical level of structural information.
+- $G_B$ denotes computational growth,
+- $I_c$ measures invariant preservation,
+- $I_{crit}$ is the critical level of structural information.
 
 At the critical point, a small increase in preserved structure produces a disproportionately large increase in computational capability.
 
@@ -91,7 +91,7 @@ The transition is not caused by additional computation alone.
 
 Instead, it occurs because the internal metric captures a previously hidden regularity in the environment.
 
-Once this regularity becomes explicit,
+Once this regularity becomes explicit:
 
 - search collapses,
 - prediction improves,
@@ -104,7 +104,7 @@ The representation itself has changed.
 
 # Computational Phase Boundary
 
-Before the transition
+Before the transition:
 
 ```text
 Small improvement
@@ -113,7 +113,7 @@ Small improvement
 Small capability gain
 ```
 
-After the transition
+After the transition:
 
 ```text
 Small improvement
@@ -132,9 +132,9 @@ The same optimization process now operates inside a fundamentally more expressiv
 
 Throughout AMP,
 
-\[
-\Omega_{\mathrm{viable}}
-\]
+$$
+\Omega_{viable}
+$$
 
 denotes the set of computations that are feasible under an agent's resource constraints.
 
@@ -144,7 +144,7 @@ Most discoveries produce modest increases.
 
 Phase transitions produce rapid expansion.
 
-Conceptually,
+Conceptually:
 
 ```text
 Before Discovery
@@ -170,7 +170,7 @@ Discovery generates a new metric.
 
 Phase transitions occur when the new metric produces a nonlinear increase in computational usefulness.
 
-The progression is therefore
+The progression is therefore:
 
 ```text
 Metric
@@ -196,21 +196,20 @@ Only some discoveries reach the critical threshold necessary for a structural tr
 
 Phase transitions are characterized by unusually large computational leverage.
 
-The leverage metric
+The leverage metric:
 
-\[
+$$
 L_M
 =
 \frac{
-\Delta
-\Omega_{\mathrm{viable}}
+\Delta\Omega_{viable}
 \,
 \Delta Q
 }
 {
 \Delta C_M
 }
-\]
+$$
 
 becomes exceptionally large because a relatively small discovery unlocks a vastly larger computational space.
 
@@ -251,22 +250,21 @@ Successive transitions create increasingly expressive computational systems.
 
 # Terminal Hypothesis
 
-AMP proposes the asymptotic relationship
+AMP proposes the asymptotic relationship:
 
-\[
+$$
 \boxed{
-\lim_{K(M_Q)\rightarrow K(I_{\mathrm{true}})}
+\lim_{K(M_Q)\rightarrow K(I_{true})}
 \frac{
-\partial
-\Omega_{\mathrm{viable}}
-}{
-\partial
-K(M_Q)
+\partial\Omega_{viable}
+}
+{
+\partial K(M_Q)
 }
 \rightarrow
 \infty
 }
-\]
+$$
 
 The hypothesis states that increasingly accurate internal metrics produce increasingly large expansions of viable computational space.
 
@@ -276,7 +274,7 @@ In this view, intelligence accelerates not because computation becomes arbitrari
 
 # Examples
 
-Potential examples of computational phase transitions include
+Potential examples of computational phase transitions include:
 
 - positional number systems,
 - symbolic algebra,
