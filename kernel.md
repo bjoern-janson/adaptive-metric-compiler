@@ -43,16 +43,20 @@ Q_M = \frac{C \times T \times G_L \times K \times R_a \times I_c}{D}
 $$
 
 $$
-\begin{array}{rll}
-C &= \frac{\Delta H(\text{Search})}{I_{\text{stored}}} &
-K &= -\frac{d \, D_{\text{KL}}(P_{\text{true}} \| P_{\text{model}})}{dt} \\
-
-G_L &= \frac{\partial \Omega_{\text{viable}}}{\partial I_{\text{stored}}} &
-R_a &= \frac{\min(\text{Scale},\text{Horizon})}{\max(\text{Scale},\text{Horizon})} \cdot \log_2(1+\mathcal{L}) \\
-
-I_c &= \frac{\text{Preserved Invariants}}{\text{Relevant Structure}} &
+\begin{aligned}
+C &= \frac{\Delta H(\text{Search})}{I_{\text{stored}}}
+&
+K &= -\frac{d\,D_{\text{KL}}(P_{\text{true}} \parallel P_{\text{model}})}{dt}
+\\[1em]
+G_L &= \frac{\partial \Omega_{\text{viable}}}{\partial I_{\text{stored}}}
+&
+R_a &= \frac{\min(\text{Scale},\text{Horizon})}{\max(\text{Scale},\text{Horizon})}
+\cdot \log_2(1+\mathcal{L})
+\\[1em]
+I_c &= \frac{\text{Preserved Invariants}}{\text{Relevant Structure}}
+&
 D &= K(M_Q)
-\end{array}
+\end{aligned}
 $$
 
 ---
